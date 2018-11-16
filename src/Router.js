@@ -37,14 +37,15 @@ import * as css from '../src/style/style';
 const DrawerNavigation = StackNavigator({
     DrawerStack: { screen: DrawerStack }
 }, {
-        headerMode: 'float',
+        headerMode: 'none',
         navigationOptions: ({ navigation }) => ({
-            headerStyle: { backgroundColor: '#1a90ff' },
-            title: 'Welcome',
-            headerLeft: <DrawerButton navigation={navigation} />,
-            headerRight: (
-                <RightMenu />
-            ),
+            // headerStyle: { backgroundColor: '#1a90ff' },
+            // title: 'Welcome',
+            // headerLeft: <DrawerButton navigation={navigation} />,
+            // headerRight: (
+            //     <RightMenu />
+            // ),
+            // headerMode: 'none'
         })
     })
 

@@ -22,21 +22,21 @@ export default class LoginComponent extends Component {
         }
     }
     goToMainMenu() {
-        services.LoginService(this.state.fields["username"], this.state.fields["password"])
-        .then(
-          (result) => {
-            setToken(result.token);
-            setUser(result.profile);
+        // services.LoginService(this.state.fields["username"], this.state.fields["password"])
+        // .then(
+        //   (result) => {
+        //     setToken(result.token);
+        //     setUser(result.profile);
             const resetAction = StackActions.reset({
                 index: 0,
                 actions: [NavigationActions.navigate({ routeName: 'MenuUtama' })],
               });
               this.props.navigation.dispatch(resetAction);    
-          },
-          (error) => {
-            alert(error);
-          }
-        );
+        //   },
+        //   (error) => {
+        //     alert(error);
+        //   }
+        // );
 
     }
     handleChange(field, e) {
